@@ -1,6 +1,6 @@
 <?php
-    include "header.php";
     session_start();
+    include "header.php";
 ?>
 
 <div class="container">
@@ -30,7 +30,7 @@
 
         <div class="card-body">
 
-            <form action="controllers\addUserController.php" method="POST" enctype="multipart/form-data">
+            <form action="controllers/addUserController.php" method="POST" enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
@@ -42,7 +42,7 @@
                     />
                     <?php
                         if(isset($_SESSION['name_err'])){?>
-                        <span> class="text-danger"> <? $_SESSION['name_err']; ?> </span>
+                        <span class="text-danger"> <?= $_SESSION['name_err']; ?> </span>
                     <?php } 
                     ?>
                             
@@ -59,7 +59,7 @@
                     />
                      <?php
                         if(isset($_SESSION['email_err'])){?>
-                        <span> class="text-danger"> <? $_SESSION['email_err']; ?> </span>
+                        <span class="text-danger"> <?= $_SESSION['email_err']; ?> </span>
                     <?php } 
                     ?>
                 </div>
@@ -75,7 +75,7 @@
                     />
                      <?php
                         if(isset($_SESSION['phone_err'])){?>
-                        <span> class="text-danger"> <? $_SESSION['phone_err']; ?> </span>
+                        <span class="text-danger"> <?= $_SESSION['phone_err']; ?> </span>
                     <?php } 
                     ?>
                 </div>
@@ -98,7 +98,7 @@
                     ></textarea>
                     <?php
                         if(isset($_SESSION['description_err'])){?>
-                        <span> class="text-danger"> <? $_SESSION['description_err']; ?> </span>
+                        <span class="text-danger"> <?= $_SESSION['description_err']; ?> </span>
                     <?php } 
                     ?>
                 </div>
